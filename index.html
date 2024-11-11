@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>环保行动</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode.js@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <!-- Banner区域 -->
+    <header class="banner">
+        <div class="banner-content">
+            <h1 class="banner-title fade-in">守护地球，从你我做起</h1>
+        </div>
+    </header>
+
+    <!-- 二维码区域 -->
+    <div class="qr-container">
+        <button id="showQRCode" class="qr-button">
+            <i class="material-icons">qr_code_2</i>
+            手机浏览
+        </button>
+        
+        <!-- 二维码弹窗 -->
+        <div id="qrModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>扫描二维码在手机上查看</h3>
+                <div id="qrcode"></div>
+                <p class="qr-tip">或直接复制链接：</p>
+                <input type="text" id="pageUrl" readonly>
+            </div>
+        </div>
+    </div>
+
+    <!-- 环保数据卡片区域 -->
+    <section class="eco-data">
+        <div class="card-container">
+            <div class="eco-card">
+                <i class="material-icons">delete</i>
+                <h3>塑料垃圾</h3>
+                <div class="counter" data-target="900">0</div>
+                <p>百万吨/年</p>
+                <small>全球每年产生的塑料垃圾总量</small>
+            </div>
+            
+            <div class="eco-card">
+                <i class="material-icons">park</i>
+                <h3>森林消失</h3>
+                <div class="counter" data-target="150">0</div>
+                <p>亩/分钟</p>
+                <small>全球每分钟消失的森林面积</small>
+            </div>
+            
+            <div class="eco-card">
+                <i class="material-icons">thermostat</i>
+                <h3>全球变暖</h3>
+                <div class="counter" data-target="1">0</div>
+                <p>°C</p>
+                <small>过去100年全球平均温度上升</small>
+            </div>
+            
+            <div class="eco-card">
+                <i class="material-icons">water_drop</i>
+                <h3>海平面上升</h3>
+                <div class="counter" data-target="3">0</div>
+                <p>毫米/年</p>
+                <small>全球平均海平面年上升速度</small>
+            </div>
+            
+            <div class="eco-card">
+                <i class="material-icons">pets</i>
+                <h3>物种灭绝</h3>
+                <div class="counter" data-target="200">0</div>
+                <p>种/天</p>
+                <small>每天正在消失的物种数量</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- 环保行为区域 -->
+    <section class="eco-actions">
+        <h2>我们能做什么</h2>
+        <div class="action-grid">
+            <!-- 环保行为图标和说明将通过JS动态生成 -->
+        </div>
+    </section>
+
+    <!-- 承诺卡片生成器 -->
+    <section class="pledge-generator">
+        <h2>一起行动</h2>
+        <div class="pledge-form">
+            <!-- 表单内容将通过JS实现 -->
+        </div>
+    </section>
+
+    <!-- 社交媒体区域 -->
+    <footer class="social-media">
+        <div class="social-container">
+            <h3 class="social-title">关注我，了解更多环保资讯</h3>
+            <div class="social-links">
+                <a href="https://weibo.com/你的微博" class="social-link" target="_blank">
+                    <i class="fab fa-weibo"></i>
+                    <span>微博</span>
+                </a>
+                <a href="#" class="social-link wechat">
+                    <i class="fab fa-weixin"></i>
+                    <span>微信</span>
+                    <div class="wechat-qr">
+                        <img src="你的微信二维码图片URL" alt="微信二维码">
+                        <p>扫码关注公众号</p>
+                    </div>
+                </a>
+                <a href="https://www.xiaohongshu.com/你的小红书" class="social-link" target="_blank">
+                    <i class="fas fa-book"></i>
+                    <span>小红书</span>
+                </a>
+                <a href="https://space.bilibili.com/你的B站" class="social-link" target="_blank">
+                    <i class="fab fa-bilibili"></i>
+                    <span>哔哩哔哩</span>
+                </a>
+            </div>
+            <p class="copyright">© 2024 环保行动. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
